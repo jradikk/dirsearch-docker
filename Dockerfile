@@ -1,7 +1,8 @@
 FROM bwits/docker-git-alpine
 
 WORKDIR /tmp/
-RUN git clone https://github.com/maurosoria/dirsearch
+RUN git clone https://github.com/maurosoria/dirsearch && rm -rf /tmp/dirsearch/.git
+
 
 FROM python:3-alpine
 
