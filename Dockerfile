@@ -2,7 +2,7 @@ FROM bwits/docker-git-alpine
 
 WORKDIR /tmp/
 RUN git clone https://github.com/maurosoria/dirsearch && rm -rf /tmp/dirsearch/.git
-
+RUN pip3 install -r requirements.txt
 
 FROM python:3-alpine
 
